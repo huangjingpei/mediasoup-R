@@ -1,0 +1,1 @@
+cmd_/opt/mediasoup-R/worker/out/Release/libuv.a := ln -f "/opt/mediasoup-R/worker/out/Release/obj.target/deps/libuv/libuv.a" "/opt/mediasoup-R/worker/out/Release/libuv.a" 2>/dev/null || (rm -rf "/opt/mediasoup-R/worker/out/Release/libuv.a" && cp -af "/opt/mediasoup-R/worker/out/Release/obj.target/deps/libuv/libuv.a" "/opt/mediasoup-R/worker/out/Release/libuv.a")

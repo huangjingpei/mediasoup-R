@@ -1,0 +1,1 @@
+cmd_/opt/mediasoup-R/worker/out/Release/obj.target/deps/netstring/libnetstring.a := rm -f /opt/mediasoup-R/worker/out/Release/obj.target/deps/netstring/libnetstring.a && ar crs /opt/mediasoup-R/worker/out/Release/obj.target/deps/netstring/libnetstring.a /opt/mediasoup-R/worker/out/Release/obj.target/netstring/deps/netstring/netstring-c/netstring.o

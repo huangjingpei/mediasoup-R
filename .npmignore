@@ -1,0 +1,24 @@
+/node_modules/
+/coverage/
+/NO_GIT/
+
+# clang-tidy stuff.
+/worker/compile_commands.json
+
+# gyp generated stuff.
+/worker/out/
+/worker/**/*.xcodeproj/
+
+# clang-fuzzer stuff is too big.
+/worker/deps/clang-fuzzer
+
+# Ignore all fuzzer generated test inputs.
+/worker/fuzzer/new-corpus/*
+!/worker/fuzzer/new-corpus/.placeholder
+
+# Vim temporal files.
+*.swp
+*.swo
+
+# Mac Stuff.
+.DS_Store

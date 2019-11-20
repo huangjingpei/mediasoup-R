@@ -1,0 +1,116 @@
+{
+  "_args": [
+    [
+      "mediasoup@github:versatica/mediasoup#v3",
+      "/opt/mediasoup-demo/server"
+    ]
+  ],
+  "_from": "versatica/mediasoup#v3",
+  "_id": "mediasoup@3.2.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/mediasoup",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/versatica/mediasoup/v3/package.json",
+      "gitUrl": "git://github.com/versatica/mediasoup.git#v3",
+      "httpsUrl": "git+https://github.com/versatica/mediasoup.git#v3",
+      "shortcut": "github:versatica/mediasoup#v3",
+      "ssh": "git@github.com:versatica/mediasoup.git#v3",
+      "sshUrl": "git+ssh://git@github.com/versatica/mediasoup.git#v3",
+      "type": "github"
+    },
+    "name": "mediasoup",
+    "raw": "mediasoup@github:versatica/mediasoup#v3",
+    "rawSpec": "github:versatica/mediasoup#v3",
+    "scope": null,
+    "spec": "github:versatica/mediasoup#v3",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/versatica/mediasoup.git#2f434d7e6f45a6855dc7985918157c4a6dec706b",
+  "_shasum": "1b5472634ca258a7d18e5de49e48ce19c93af2cc",
+  "_shrinkwrap": null,
+  "_spec": "mediasoup@github:versatica/mediasoup#v3",
+  "_where": "/opt/mediasoup-demo/server",
+  "bugs": {
+    "url": "https://github.com/versatica/mediasoup/issues"
+  },
+  "contributors": [
+    {
+      "name": "Iñaki Baz Castillo",
+      "email": "ibc@aliax.net",
+      "url": "https://inakibaz.me"
+    },
+    {
+      "name": "José Luis Millán",
+      "email": "jmillan@aliax.net",
+      "url": "https://github.com/jmillan"
+    }
+  ],
+  "dependencies": {
+    "clang-tools-prebuilt": "^0.1.4",
+    "debug": "^4.1.1",
+    "h264-profile-level-id": "^1.0.0",
+    "netstring": "^0.3.0",
+    "random-number": "^0.0.9",
+    "uuid": "^3.3.2"
+  },
+  "description": "Cutting Edge WebRTC Video Conferencing",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-jest": "^22.13.6",
+    "gulp": "^4.0.2",
+    "gulp-clang-format": "^1.0.27",
+    "jest": "^24.8.0",
+    "jest-tobetype": "^1.2.3",
+    "open-cli": "^5.0.0",
+    "sctp": "^0.0.18"
+  },
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "gitHead": "2f434d7e6f45a6855dc7985918157c4a6dec706b",
+  "homepage": "https://mediasoup.org",
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "test/test.*\\.js",
+    "verbose": true
+  },
+  "keywords": [
+    "nodejs",
+    "ortc",
+    "sfu",
+    "webrtc"
+  ],
+  "license": "ISC",
+  "main": "lib/index.js",
+  "name": "mediasoup",
+  "optionalDependencies": {
+    "clang-tools-prebuilt": "^0.1.4"
+  },
+  "os": [
+    "!win32"
+  ],
+  "readme": "# mediasoup v3\n\n[![][mediasoup-banner]][mediasoup-website]\n\n[![][npm-shield-mediasoup]][npm-mediasoup]\n[![][travis-ci-shield-mediasoup]][travis-ci-mediasoup]\n[![][codacy-grade-shield-mediasoup]][codacy-grade-mediasoup]\n[![][opencollective-shield-mediasoup]][opencollective-mediasoup]\n\n\n## Website and Documentation\n\n* [mediasoup.org][mediasoup-website]\n\n\n## Support Forum\n\n* [mediasoup.discourse.group][mediasoup-discourse]\n\n\n## Design Goals\n\nmediasoup and its client side libraries are designed to accomplish with the following goals:\n\n* Be a [SFU](https://webrtcglossary.com/sfu/) (Selective Forwarding Unit).\n* Support both WebRTC and plain RTP input and output.\n* Be a Node.js module in server side.\n* Be a tiny JavaScript and C++ libraries in client side.\n* Be minimalist: just handle the media layer.\n* Be signaling agnostic: do not mandate any signaling protocol.\n* Be super low level API.\n* Support all existing WebRTC endpoints.\n* Enable integration with well known multimedia libraries/tools.\n\n\n## Architecture\n\n![][mediasoup-architecture]\n\n\n## Use Cases\n\nmediasoup and its client side libraries provide a super low level API. They are intended to enable different use cases and scenarios, without any constraint or assumption. Some of these use cases are:\n\n* Group video chat applications.\n* One-to-many (or few-to-many) broadcasting applications in real-time.\n* RTP streaming.\n\n\n## Features\n\n* ECMAScript 6 low level API.\n* Multi-stream: multiple audio/video streams over a single ICE + DTLS transport.\n* IPv6 ready.\n* ICE / DTLS / RTP / RTCP over UDP and TCP.\n* Simulcast and SVC support.\n* Congestion control.\n* Sender and receiver bandwidth estimation with spatial/temporal layers distribution algorithm.\n* SCTP support (WebRTC DataChannels and SCTP over plain UDP).\n* Extremely powerful (media worker subprocess coded in C++ on top of [libuv](https://libuv.org)).\n\n\n## Demo Online\n\n[![][mediasoup-demo-screenshot]][mediasoup-demo]\n\nTry it at [v3demo.mediasoup.org](https://v3demo.mediasoup.org) ([source code](https://github.com/versatica/mediasoup-demo)).\n\n\n## Authors\n\n* Iñaki Baz Castillo [[website](https://inakibaz.me)|[github](https://github.com/ibc/)]\n* José Luis Millán [[github](https://github.com/jmillan/)]\n\n\n## Sponsors\n\n* [46 Labs LLC](https://46labs.com): Special thanks to 46 Labs where we both, José Luis and Iñaki, develop a mediasoup based multiparty video conferencing app focused on the enterprise market for more than a year.\n\n\n## Donate\n\nYou can support mediasoup by becoming a [sponsor][donate] or making a [donation][donate]. Thanks!\n\n\n## License\n\n[ISC](./LICENSE)\n\n\n\n\n[mediasoup-banner]: /art/mediasoup-banner.png\n[mediasoup-website]: https://mediasoup.org\n[mediasoup-discourse]: https://mediasoup.discourse.group\n[npm-shield-mediasoup]: https://img.shields.io/npm/v/mediasoup.svg\n[npm-mediasoup]: https://npmjs.org/package/mediasoup\n[travis-ci-shield-mediasoup]: https://travis-ci.com/versatica/mediasoup.svg?branch=master\n[travis-ci-mediasoup]: https://travis-ci.com/versatica/mediasoup\n[codacy-grade-shield-mediasoup]: https://img.shields.io/codacy/grade/3c8b9efc83674b6189707ab4188cfb2b.svg\n[codacy-grade-mediasoup]: https://www.codacy.com/app/versatica/mediasoup\n[opencollective-shield-mediasoup]: https://img.shields.io/opencollective/all/mediasoup.svg\n[opencollective-mediasoup]: https://opencollective.com/mediasoup/\n[donate]: https://mediasoup.org/sponsors/#become-a-sponsor\n[mediasoup-architecture]: /art/mediasoup-v3-architecture-01.svg\n[mediasoup-demo-screenshot]: /art/mediasoup-v3.png\n[mediasoup-demo]: https://v3demo.mediasoup.org\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versatica/mediasoup.git"
+  },
+  "scripts": {
+    "coverage:node": "make -C worker && jest --coverage && open-cli coverage/lcov-report/index.html",
+    "format:worker": "make format -C worker",
+    "lint": "npm run lint:node && npm run lint:worker",
+    "lint:node": "eslint -c .eslintrc.js gulpfile.js lib test",
+    "lint:worker": "make lint -C worker",
+    "postinstall": "make -C worker",
+    "test": "npm run test:node && npm run test:worker",
+    "test:node": "make -C worker && jest",
+    "test:worker": "make test -C worker"
+  },
+  "version": "3.2.4"
+}
