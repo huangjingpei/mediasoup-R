@@ -1,0 +1,62 @@
+1.开始录像
+node->mediasoup
+{
+	"data": {
+		"recordParameters": [{
+			"audio": {
+				"sampleRate": 48000,
+				"channels": 2,
+				"codec": "aac"
+			}
+		}, {
+			"video": {
+				"width": 1280,
+				"height": 720,
+				"bitrate": 1048576,
+				"bps": 15,
+				"codec": "h264"
+			}
+		}],
+		"path": "record.mp4"
+	},
+	"id": 11,
+	"sessionId": "7e8 dc4e7 - d1ea - 4 ca6 - b20c - 23e2 a4f233dc",
+	"method": "record.start"
+}
+mediasoup->node
+{
+	"accepted": true,
+	"id": 11,
+	"sessionId": "7e8dc4e7-d1ea-4ca6-b20c-23e2a4f233dc"
+}
+
+2.停止录像
+node->mediasoup
+{
+	"data": {
+		"reason": 0
+	},
+	"id": 12,
+	"method": "record.stop",
+	"sessionId": "7e8dc4e7-d1ea-4ca6-b20c-23e2a4f233dc"
+}
+mediasoup->node
+{
+	"accepted": true,
+	"id": 12,
+	"sessionId": "7e8dc4e7-d1ea-4ca6-b20c-23e2a4f233dc"
+}
+
+
+3.mediasoup的通知，有开始，停止，出错(begin, end, error)三种情况,
+error的错误类型和定义;
+文件写入失败，999
+磁盘空间已慢 998
+文件大小超过4G 997
+...
+
+
+{"data":{"recordState":"begin"},"event":"recordStateChange","sessionId":"7e8dc4e7-d1ea-4ca6-b20c-23e2a4f233dc"} 
+{"data":{"recordState":"end"},"event":"recordStateChange","sessionId":"7e8dc4e7-d1ea-4ca6-b20c-23e2a4f233dc"} 
+{"data":{"recordState":"error",　"reason":999 },"event":"recordStateChange","sessionId":"7e8dc4e7-d1ea-4ca6-b20c-23e2a4f233dc"} 
+
